@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-const alunoSchema = new mongoose.Shema({
+const alunoSchema = 
+ mongoose.Shema({
     name: {
         type: String,
         required: true
@@ -20,9 +21,7 @@ const alunoSchema = new mongoose.Shema({
     timestampas: true
 })
 
-const Aluno = mongoose.model('Aluno', alunoSchema)
-
-module.exports = Aluno
+module.exports = mongoose.model('Aluno', alunoSchema);
 
 
 
