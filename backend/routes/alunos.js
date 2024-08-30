@@ -3,8 +3,6 @@ const router = express.Router()
 const Aluno = require('../models/Aluno')
 
 // Criação do CRUD = POST, GET, PUT, DELETE
-
-
 // Cadastrando meu ALuno
 router.post('/', async (req, res) => {
     const { nome,cpf } = req.body;
@@ -34,4 +32,4 @@ router.delete('/:id', async (req, res) => {
     res.json({ message: 'Aluno deletado com sucesso! ' })
 })
 
-module.exports.router
+module.exports = router

@@ -3,7 +3,7 @@ const API_URL = 'http://localhost:3000/api/alunos';
 
 document.getElementById('alunoForm').addEventListener('submit', async (e) => {
     e.preventDefault();
-    const title = document.getElementById('nome').value;
+    const title = document.getElementById('title').value;
     const cpf = document.getElementById('cpf').value;
 
     const response = await fetch(API_URL, {
