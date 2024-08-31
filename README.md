@@ -1,4 +1,5 @@
 Cadastro de Alunos
+
 Este é um projeto Fullstack para o cadastro de alunos, desenvolvido com Node.js no backend e um frontend simples em HTML, CSS e JavaScript. Ele permite cadastrar, listar, atualizar e deletar informações de alunos em um banco de dados MongoDB.
 
 . Índice
