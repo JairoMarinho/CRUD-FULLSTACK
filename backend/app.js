@@ -9,7 +9,7 @@ app.use(cors()); // Ativando CORS, caso necessário
 app.use(express.json()); // Para permitir o parsing de JSON
 
 // Conectar ao MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/api/alunos', {
+mongoose.connect('mongodb://127.0.0.1:27017/alunos', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => {
@@ -26,4 +26,5 @@ mongoose.connect('mongodb://127.0.0.1:27017/api/alunos', {
 
 // Rotas
 app.use('/api/alunos', alunosRouter);
+
 
