@@ -26,3 +26,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/alunos', {
 
 // Rotas
 app.use('/api/alunos', alunosRouter);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7bd1be8614a58104451035c77f94938f9acc7f61
