@@ -1,6 +1,6 @@
 {
-    "name": "Reclamações PWA",
-    "short_name": "Reclamações",
+    "name": "Cadastro dos alunos",
+    "short_name": "cadastro",
     "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#ffffff",

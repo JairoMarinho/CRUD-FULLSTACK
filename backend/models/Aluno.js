@@ -6,7 +6,7 @@ const alunoSchema = new mongoose.Schema({
         required: true
     },
 
-    cpf: {
+    matricula: {
         type:Number,
         required: true,
         unique: true

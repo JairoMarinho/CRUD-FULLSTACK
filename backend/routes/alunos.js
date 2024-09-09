@@ -5,9 +5,9 @@ const Aluno = require('../models/Aluno')
 // Criação do CRUD = POST, GET, PUT, DELETE
 // Cadastrando meu ALuno
 router.post('/', async (req, res) => {
-    const { name,cpf } = req.body;
+    const { name, matricula } = req.body;
     const newAluno = new Aluno({
-        name, cpf
+        name, matricula
     })
     await newAluno.save()
     res.json(newAluno)
@@ -21,8 +21,8 @@ router.get('/', async (req, res) => {
 
 // Atualizar o cadastro do Aluno
 router.put('/:id', async (req, res) => {
-    const { name, cpf } = req.body
-    const updateAluno = await Aluno.findByIdAndUpdate(req.params.id, { name, cpf }, { new: true })
+    const { name, matricula } = req.body
+    const updateAluno = await Aluno.findByIdAndUpdate(req.params.id, { name, matricula }, { new: true })
     res.json(updateAluno)
 })
 

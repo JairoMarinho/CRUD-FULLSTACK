@@ -1,85 +1,84 @@
-Cadastro de Alunos
 
-Este é um projeto Fullstack para o cadastro de alunos, desenvolvido com Node.js no backend e um frontend simples em HTML, CSS e JavaScript. Ele permite cadastrar, listar, atualizar e deletar informações de alunos em um banco de dados MongoDB.
+Cadastro de Estudantes
 
-. Índice
-. Instalação
-. Configuração
-. Uso
-. API Endpoints
-. Contribuição
-. Licença
+Este é um projeto Fullstack para o cadastro de estudantes, desenvolvido com Node.js no backend e um frontend simples em HTML, CSS e JavaScript. A aplicação permite cadastrar, listar, atualizar e deletar informações dos estudantes em um banco de dados MongoDB.
 
---> Instalação
+Índice
 
-1. Clone este repositório para sua máquina local:
-   git clone https://github.com/username/cadastro-alunos.git
-   cd cadastro-alunos
+Instalação
+Configuração
+Uso
+API Endpoints
+Contribuição
+Licença
+Instalação
 
-2. Instale as dependências do backend:
-   cd backend
-   npm install
+Clone este repositório para sua máquina local:
 
-3. Instale as dependências do frontend:
-  cd ../frontend
-  npm install
+git clone https://github.com/username/cadastro-estudantes.git
+cd cadastro-estudantes
+Instale as dependências do backend:
 
---> Configuração
+cd backend
+npm install
+Instale as dependências do frontend:
 
-Este projeto utiliza o MongoDB para armazenar os dados dos alunos. Certifique-se de que o MongoDB está instalado e em execução na sua máquina. A conexão é feita através do Mongoose.
+cd ../frontend
+npm install
+Configuração
 
-1. Configuração do Backend:
-   mongoose.connect('mongodb://127.0.0.1:27017/alunos')
+Este projeto utiliza o MongoDB para armazenar os dados dos estudantes. Certifique-se de que o MongoDB está instalado e em execução na sua máquina. A conexão é feita através do Mongoose.
 
-2. Para rodar o backend:
-  cd backend
-  npm start
+Configuração do Backend:
 
-3. Configuração do Frontend:
-   O frontend está localizado na pasta frontend. Para iniciar o frontend, abra o arquivo index.html no seu navegador.
+mongoose.connect('mongodb://127.0.0.1:27017/estudantes')
+Para rodar o backend:
 
----> Uso
-  No frontend, utilize o formulário para cadastrar novos alunos. O backend irá gerenciar as operações de criação, listagem, atualização e exclusão de registros.
+cd backend
+npm start
+Configuração do Frontend: O frontend está localizado na pasta frontend. Para iniciar o frontend, abra o arquivo index.html no seu navegador.
 
-  As ações de CRUD são manipuladas através de uma API RESTful, conforme descrito na seção abaixo.
+Uso
 
-  --> API Endpoints
+No frontend, utilize o formulário para cadastrar novos estudantes. O backend irá gerenciar as operações de criação, listagem, atualização e exclusão de registros.
 
-  1. POST /api/alunos
-     Descrição: Cadastra um novo aluno.
-      {
-        "name": "Nome do Aluno",
-        "cpf": "12345678901"
-      }
+As ações de CRUD são manipuladas através de uma API RESTful, conforme descrito na seção abaixo.
 
-  2. GET /api/alunos
-     Descrição: Lista todos os alunos cadastrados.
-      {
-        "_id": "id_do_aluno",
-        "name": "Nome do Aluno",
-        "cpf": "12345678901"
-      }
+API Endpoints
 
-   3. PUT /api/alunos
-     Descrição: Atualiza os dados de um aluno pelo ID.
-     {
-      "name": "Novo Nome",
-      "cpf": "98765432100"
-    }
+POST /api/estudantes
 
-  4. DELETE /api/alunos
-      Descrição: Deleta um aluno pelo ID.
+Descrição: Cadastra um novo estudante.
+Exemplo de corpo da requisição:
+{ "name": "Nome do Estudante", "matricula": "123456" }
+GET /api/estudantes
 
---> Contribuição
+Descrição: Lista todos os estudantes cadastrados.
+Exemplo de resposta:
+{ "_id": "id_do_estudante", "name": "Nome do Estudante", "matricula": "123456" }
+PUT /api/estudantes/:id
 
-  1. Faça um fork deste repositório.
-  2. Crie uma nova branch (git checkout -b feature/nova-feature).
-  3. Faça suas alterações e commit (git commit -am 'Adiciona nova feature').
-  4. Envie para o repositório remoto (git push origin feature/nova-feature).
-  5. Abra um Pull Request.
+Descrição: Atualiza os dados de um estudante pelo ID.
+Exemplo de corpo da requisição:
+{ "name": "Novo Nome", "matricula": "654321" }
+DELETE /api/estudantes/:id
 
---> Licença
-  Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
+Descrição: Deleta um estudante pelo ID.
+Contribuição
 
+Faça um fork deste repositório.
 
-     
+Crie uma nova branch:
+
+git checkout -b feature/nova-feature
+Faça suas alterações e commit:
+
+git commit -am 'Adiciona nova feature'
+Envie para o repositório remoto:
+
+git push origin feature/nova-feature
+Abra um Pull Request.
+
+Licença
+
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
